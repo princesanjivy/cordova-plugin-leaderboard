@@ -1,3 +1,5 @@
+// princesanjivy
+
 package com.princewebstudio.plugin;
 
 import org.apache.cordova.*;
@@ -90,7 +92,7 @@ public class Leaderboard extends CordovaPlugin{
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent intent){
     super.onActivityResult(requestCode, resultCode, intent);
-    
+
   }
 
 }
