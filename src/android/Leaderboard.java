@@ -87,4 +87,9 @@ public class Leaderboard extends CordovaPlugin{
       });
   }
 
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent intent){
+    super.onActivityResult(requestCode, resultCode, intent);
+  }
+
 }
