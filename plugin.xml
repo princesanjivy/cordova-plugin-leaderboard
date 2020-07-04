@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.princewebstudio.leaderboard"
+        version="1.0.0">
+
+  <name>cordova-plugin-leaderboard</name>
+  <author>princesanjivy</author>
+  <license>MIT license</license>
+
+  <engines>
+    <engine name="cordova" version=">=4.0.0"/>
+  </engines>
+
+  <asset src="www/leaderboard.js" target="js/leaderboard.js"/>
+
+  <js-module src="www/leaderboard.js" name="leaderboard">
+    <clobbers target="leaderboard" />
+  </js-module>
+
+  <platform name="android">
+    <preference name="APP_ID" />
+
+    <framework src="com.google.android.gms:play-services-games:19.0.0" />
+    <framework src="com.google.android.gms:play-services-auth:18.0.0" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Leaderboard">
+        <param name="android-package" value="com.princewebstudio.plugin.Leaderboard"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/app_id" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
+
+    <config-file target="res/values/strings.xml" parent="/*">
+      <string name="app_id">$APP_ID</string>
+    </config-file>
+
+    <source-file src="src/android/Leaderboard.java" target-dir="src/com/princewebstudio/plugin/"/>
+  </platform>
+</plugin>
