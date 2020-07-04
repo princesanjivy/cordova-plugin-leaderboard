@@ -36,9 +36,9 @@ public class Leaderboard extends CordovaPlugin{
 
   @Override
   public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException{
-    if(action.equals("init")){
-      callback = callbackContext;
+    callback = callbackContext;
 
+    if(action.equals("init")){
       GoogleSignInOptions signInOptions = GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN;
       GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this.cordova.getActivity(), signInOptions);
       Intent intent = googleSignInClient.getSignInIntent();
@@ -49,8 +49,6 @@ public class Leaderboard extends CordovaPlugin{
       return true;
     }
     else if(action.equals("setScore")){
-      callback = callbackContext;
-
       String leaderboard_id = data.getString(0);
       int score = Integer.valueOf(data.getString(1));
 
@@ -59,8 +57,6 @@ public class Leaderboard extends CordovaPlugin{
       return true;
     }
     else if(action.equals("showLeaderboard")){
-      callback = callbackContext;
-
       String leaderboard_id = data.getString(0);
 
       showLeaderboard(leaderboard_id);
@@ -71,4 +67,24 @@ public class Leaderboard extends CordovaPlugin{
       return false;
     }
   }
+
+  private void setScore(String leaderboard_id, int score){
+    Games.getLeaderboardsClient(this.cordova.getActivity(),
+      GoogleSignIn.getLastSignedInAccount(this.cordova.getContext()))
+      .submitScore(leaderboard_id, score);
+  }
+
+  private void showLeaderboard(String leaderboard_id){
+    Games.getLeaderboardsClient(this.cordova.getActivity(),
+      GoogleSignIn.getLastSignedInAccount(this.cordova.getContext()))
+      .getLeaderboardIntent(leaderboard_id)
+      .addOnSuccessListener(new OnSuccessListener<Intent>(){
+        @Override
+        public void onSuccess(Intent intent){
+          cordova.setActivityResultCallback(reference);
+          cordova.startActivityForResult(reference, intent, RC_LEADERBOARD_UI);
+        }
+      });
+  }
+
 }
