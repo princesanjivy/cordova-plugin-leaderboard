@@ -15,10 +15,11 @@
     "plugin",
     "playgames",
     "game",
-    "google play"
+    "google play",
     "leaderboard",
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "construct2"
   ],
   "author": "Prince Sanjivy",
   "license": "MIT license",
