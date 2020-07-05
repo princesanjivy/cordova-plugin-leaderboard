@@ -20,15 +20,46 @@ cordova plugin add https://github.com/princesanjivy/cordova-plugin-leaderboard.g
 
 ## Usage
 
+Place this inside of your  `deviceready` function.
+
 ### Sign in
 
 ```javascript
 leaderboard.init(
   function(){
-    \\ on sign in success;
+    // on sign in success;
   },
   function(){
-    \\ on failure ;
+    // on failure ;
+  }
+);
+```
+
+### Submit Score
+
+```javascript
+leaderboard.setScore(
+  leaderboard_id, // Leaderboard id
+  score, // score to be submitted to that leaderboard
+  function(){
+    // on sign in success;
+  },
+  function(){
+    // on failure ;
+  }
+);
+```
+
+### Show Leaderboard
+
+```javascript
+leaderboard.setScore(
+  leaderboard_id, // Leaderboard id
+  function(){
+    // on sign in success;
+  },
+  function(){
+    // on failure ;
   }
 );
 ```
