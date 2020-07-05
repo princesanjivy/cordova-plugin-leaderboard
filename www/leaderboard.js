@@ -1,4 +1,4 @@
-// princesanjivy
+// Copyright (c) 2020 Prince Sanjivy
 
 module.exports = {
   init: function(success, error){

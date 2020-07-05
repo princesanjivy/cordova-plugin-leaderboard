@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Prince Sanjivy
+
 // princesanjivy
 
 package com.princewebstudio.plugin;
@@ -93,6 +95,15 @@ public class Leaderboard extends CordovaPlugin{
   public void onActivityResult(int requestCode, int resultCode, Intent intent){
     super.onActivityResult(requestCode, resultCode, intent);
 
+    if(requestCode == RC_SIGN_IN){
+      GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+      if(result.isSuccess()){
+        callback.success("Sign In success!");
+      }
+      else{
+        callback.error("Error in Sign In!");
+      }
+    }
   }
 
 }

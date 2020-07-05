@@ -41,12 +41,8 @@ leaderboard.init(
 leaderboard.setScore(
   leaderboard_id, // Leaderboard id
   score, // score to be submitted to that leaderboard
-  function(){
-    // on sign in success;
-  },
-  function(){
-    // on failure ;
-  }
+  function(){}, //successCallback
+  function(){} // errorCallback
 );
 ```
 
@@ -55,11 +51,13 @@ leaderboard.setScore(
 ```javascript
 leaderboard.setScore(
   leaderboard_id, // Leaderboard id
-  function(){
-    // on sign in success;
-  },
-  function(){
-    // on failure ;
-  }
+  function(){}, // successCallback
+  function(){} // errorCallback
 );
 ```
+
+## More Info
+https://cordova.apache.org/plugins/
+
+## License
+MIT license
