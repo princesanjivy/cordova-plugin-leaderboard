@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/princesanjivy/cordova-plugin-leaderboard#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "main": "index.js",
   "scripts": {
