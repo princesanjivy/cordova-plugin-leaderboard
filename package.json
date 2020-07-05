@@ -1,10 +1,12 @@
 {
-  "name": "cordova-plugin-leaderboard",
+  "name": "@princesanjivy/cordova-plugin-leaderboard",
   "version": "1.0.0",
-  "description": "A Google Play Games Leaderboard plugin for cordova",
+  "description": "Cordova plugin for Google Play Games Leaderboard service for android.",
   "cordova": {
     "id": "cordova-plugin-leaderboard",
-    "platforms": ["android"]
+    "platforms": [
+      "android"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,16 @@
     "construct2"
   ],
   "author": "Prince Sanjivy",
-  "license": "MIT license",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/princesanjivy/cordova-plugin-leaderboard/issues"
   },
   "homepage": "https://github.com/princesanjivy/cordova-plugin-leaderboard#readme",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
