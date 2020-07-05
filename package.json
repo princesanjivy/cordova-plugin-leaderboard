@@ -1,5 +1,5 @@
 {
-  "name": "@princesanjivy/cordova-plugin-leaderboard",
+  "name": "cordova-plugin-leaderboard",
   "version": "1.0.0",
   "description": "Cordova plugin for Google Play Games Leaderboard service for android.",
   "cordova": {
