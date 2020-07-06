@@ -49,7 +49,7 @@ leaderboard.setScore(
 ### Show Leaderboard
 
 ```javascript
-leaderboard.setScore(
+leaderboard.showLeaderboard(
   leaderboard_id, // Leaderboard id
   function(){}, // successCallback
   function(){} // errorCallback
