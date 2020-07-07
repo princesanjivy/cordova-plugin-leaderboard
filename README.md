@@ -56,6 +56,9 @@ leaderboard.showLeaderboard(
 );
 ```
 
+## Construct 2 Plugin
+https://github.com/princesanjivy/construct2-leaderboard
+
 ## More Info
 https://cordova.apache.org/plugins/
 
