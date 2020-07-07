@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-leaderboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cordova plugin for Google Play Games Leaderboard service for android.",
   "cordova": {
     "id": "cordova-plugin-leaderboard",
