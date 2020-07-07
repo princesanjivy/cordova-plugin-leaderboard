@@ -57,7 +57,7 @@ leaderboard.showLeaderboard(
 ```
 
 ## Construct 2 Plugin
-https://github.com/princesanjivy/construct2-leaderboard
+[Construct2 Play Games Leaderboard]https://www.construct.net/en/construct-2/addons/415/play-games-leaderboard)
 
 ## More Info
 https://cordova.apache.org/plugins/
